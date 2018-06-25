@@ -8,6 +8,6 @@
         "consent-data":             {"table_id":"20011504","url":"modules/consent-data.html","preload":true},
         "registration-form":        {"table_id":"20011505","url":"modules/registration-form.html","preload":true},
         "registration-data":        {"table_id":"20011505","url":"modules/registration-data.html","preload":true},
-        "registration-thank-you-page":   {"url":"modules/registration-thank-you-page.html","preload":true}
+        "sleepfix-study-page":   {"url":"modules/sleepfix-study-page.html","preload":true}
 	}
 }
