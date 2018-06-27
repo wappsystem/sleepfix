@@ -1,9 +1,13 @@
 {
-	"api_path_development":"https://cbs.wappsystem.com/dev/",
-	"api_path_production":"https://cbs.wappsystem.com/dev/",
-	"default_production":"No",
-	"panels":{
-		"home":	        {"url":"panels/home.html","modules":[]},
-		"pages":	    {"url":"","modules":["pages|index.json"]}
+    "modules":
+	{
+        "screening-form":           {"table_id":"20011503","url":"modules/tasks/screening-form.html"},
+        "screening-data":           {"table_id":"20011503","url":"modules/tasks/screening-data.html"},
+        "screen-failure-thank-you-page": {"url":"modules/tasks/screen-failure-thank-you-page.html"},
+        "consent-form":             {"table_id":"20011504","url":"modules/tasks/consent-form.html"},
+        "consent-data":             {"table_id":"20011504","url":"modules/tasks/consent-data.html"},
+        "registration-form":        {"table_id":"20011505","url":"modules/tasks/registration-form.html"},
+        "registration-data":        {"table_id":"20011505","url":"modules/tasks/registration-data.html"},
+        "registration-thank-you-page":   {"url":"modules/tasks/registration-thank-you-page.html"}
 	}
 }
