@@ -1,13 +1,11 @@
 {
     "modules":
 	{
-        "screening-form":           {"table_id":"20011503","url":"modules/tasks/screening-form.html"},
-        "screening-data":           {"table_id":"20011503","url":"modules/tasks/screening-data.html"},
-        "screen-failure-thank-you-page": {"url":"modules/tasks/screen-failure-thank-you-page.html"},
-        "consent-form":             {"table_id":"20011504","url":"modules/tasks/consent-form.html"},
-        "consent-data":             {"table_id":"20011504","url":"modules/tasks/consent-data.html"},
-        "registration-form":        {"table_id":"20011505","url":"modules/tasks/registration-form.html"},
-        "registration-data":        {"table_id":"20011505","url":"modules/tasks/registration-data.html"},
-        "registration-thank-you-page":   {"url":"modules/tasks/registration-thank-you-page.html"}
+        "screening-form":                   {"table_id":"20011503", "url":"modules/tasks/mirror/screening-form.html"},
+        "consent-form":                     {"table_id":"20011504", "url":"modules/tasks/mirror/consent-form.html"},
+        "registration-form":                {"table_id":"20011505", "url":"modules/tasks/mirror/registration-form.html"},
+
+        "screen-failure-thank-you-page":    {                       "url":"modules/tasks/screen-failure-thank-you-page.html"},
+        "registration-thank-you-page":      {                       "url":"modules/tasks/registration-thank-you-page.html"}
 	}
 }
