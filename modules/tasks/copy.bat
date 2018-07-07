@@ -1,6 +1,9 @@
-rem xcopy %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix-management\modules\tasks\task-form.js %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix\modules\tasks\mirror\task-form.js /D
-xcopy %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix-management\modules\tasks\screening-form.html %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix\modules\tasks\mirror\screening-form.html /D
-xcopy %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix-management\modules\tasks\registration-form.html %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix\modules\tasks\mirror\registration-form.html /D
-xcopy %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix-management\modules\tasks\consent-form.html %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix\modules\tasks\mirror\consent-form.html /D
-xcopy %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix-management\modules\tasks\pis-form.html %USERPROFILE%\Documents\GitHub\wappsystem\sleepfix\modules\tasks\mirror\pis-form.html /D
+set S=%USERPROFILE%\Documents\GitHub\wappsystem\sleepfix-management\modules\tasks
+set D=%USERPROFILE%\Documents\GitHub\wappsystem\sleepfix\modules\tasks\mirror
+
+xcopy %S%\screening-form.html %D%\screening-form.html /D
+xcopy %S%\pis-form.html %D%\pis-form.html /D
+xcopy %S%\consent-form.html %D%\consent-form.html /D
+xcopy %S%\registration-form.html %D%\registration-form.html /D
+
 pause
