@@ -1,28 +1,27 @@
-<div layout-html id=layout__ID>
-    <div header id=header__ID>
+<div layout-html id=layout_0>
+    <div header id=header_0>
         <nav class="navbar navbar-expand-lg navbar-light bg-light _fixed-top">
-          <div class="container"> <a style='cursor:pointer' module=Home><img src="images/sleepfix-logo.png" width="auto" height="45px" alt=""></a>
-<!--            <button type="button" id=btn1__ID class="btn btn-outline-light">SLEEPFIX DATA COLLECTION</button> -->
+          <div class="container"> <a id=vm_logo module=Home style='cursor:pointer'><img src="images/sleepfix-logo.png" width="auto" height="45px" alt=""></a>
+              <button type="button" id=btn1_0 class="btn btn-outline-light">SLEEPFIX DATA COLLECTION</button>
           </div>
         </nav>
     </div>
-    <div content id=content__ID>
-        <div content-container id="content_container__ID">
-        	<div id=vm_loader class="loader__ID"></div>
+    <div content id=content_0>
+        <div content-container id="content_container_0">
+        	<div id=vm_loader class="loader_0"></div>
         </div>
-        <footer id=footer__ID>
+        <footer id=footer_0>
             <div class="container mt-0">
               <div class="row justify-content-end px-0">
-                <div class="col"><a id=btn2__ID><img src="images/AppStore.png" alt="Download from the App Store"/></a><a id=btn3__ID><img src="images/GooglePlay.png" alt="Download from Google Play"/></a> </div>
+                <div class="col"><a id=btn2_0><img src="images/AppStore.png" alt="Download from the App Store"/></a><a id=btn3_0><img src="images/GooglePlay.png" alt="Download from Google Play"/></a> </div>
               </div>
             </div>
         </footer>
     </div>
 </div>
 <div system-html>
-    <div style='position:absolute;right:20px;bottom:0'>
-        <span id=database_p__ID style='color:green'>.</span>
-        <span id=database_d__ID style='color:red'>. <span id=vm_system_info style='color:#555';></span></span>
+    <div style='position:fixed;right:20px;bottom:0'>
+        <span id=database_d_0><span id=vm_system_info style='color:#555';></span></span>
     </div>
     <div alert class="modal fade" id="vm_alert_information" tabindex="-1" role="dialog" aria-labelledby="vm_dialog" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
@@ -45,42 +44,35 @@
 </div>
 <script layout-js>
     //-------------------------------------
-    $('#btn1__ID').on('click',function(){
-        alert("Where to go?");
+    $('#btn1_0').on('click',function(){
+        $vm.load_module_v2('sleepfix-study-page');
     })
     //-------------------------------------
-    $('#btn2__ID').on('click',function(){
+    $('#btn2_0').on('click',function(){
        alert("Where to go?");
     })
     //-------------------------------------
-    $('#btn3__ID').on('click',function(){
+    $('#btn3_0').on('click',function(){
        alert("Where to go?");
     })
     //-------------------------------------
     $vm.layout=function(){
 		//------------------------------------
-        $vm.root_layout_content_slot="content_container__ID";
+        $vm.root_layout_content_slot="content_container_0";
 		//------------------------------------
         var set_height=function(){
-			var header_height=$('#header__ID').outerHeight(); $vm.header_height=header_height;
-			var footer_height=$('#footer__ID').outerHeight();
-			$vm.min_height=($(window).height()-header_height-footer_height-1);
-			$('#content_container__ID').css({'min-height':($vm.min_height)+'px'});
-            $('#content__ID').css({'height':(($(window).height()-header_height-1))+'px'});
+			var header_height=$('#header_0').outerHeight(); $vm.header_height=header_height;
+			var footer_height=$('#footer_0').outerHeight();
+            $vm.min_height=($(window).height()-header_height-footer_height-1);
+			$('#content_container_0').css({'min-height':($vm.min_height)+'px'});
+            $('#content_0').css({'min-height':(($(window).height()-header_height-1))+'px'});
 		}
 		//------------------------------------
 		set_height();window.onresize=function(){set_height();}
         //-----------------------------------------
 	}
-    $vm.top_right_corner=function(){
-        if($vm.server=='development') $('#database_d__ID').show();
-        else if($vm.server=='production') $('#database_p__ID').show();
-    }
     $vm.footer=function(){
-        $vm.root_layout_footer='footer__ID';
-        //-----------------------------------------------------
-        $('#text__ID').html("Copyright © "+(new Date()).getFullYear()+", SleepFix. <span id=FL__ID>Powered by Wappsystem</span>");
-        //------------------------------------
+        $vm.root_layout_footer='footer_0';
     }
     //---------------------------------------------
     $vm.toggle=function() {
@@ -89,21 +81,10 @@
         else x.className="";
     }
     $vm.header=function(){
-        $('#header__ID a').on('click',function(){
+        $('#vm_menu a').on('click',function(){
             var module=$(this).attr('module');
             if(module!=undefined) $vm.load_module_v2(module);
-            //if( $(this).attr('toggle')==undefined){
-            //    var x = document.getElementById("vm_menu");
-            //    if(x.className==='responsive') x.className="";
-            //}
         })
-        $('.vm_dropdown').on('click',function(){
-            var d=$(this).find('.vm_dropdown-content');
-            if(d.css('display')=='block') d.css('display','none');
-            else d.css('display','block');
-        })
-        $(".vm_dropdown").mouseleave(function (){  $(".vm_dropdown-content").hide();  })
-        $(".vm_dropdown-content").mouseleave(function (){  $(this).hide();  })
         $('#m_title').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module);    })
         $('#vm_logo').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module);    })
         //---------------------------------------------
@@ -112,22 +93,22 @@
             if($vm.user_puid=="1") third=" (Google)";
             if($vm.user_puid=="2") third=" (Facebook)";
             if($vm.user=='guest'){
-                $('#username__ID').text('');
-                $('#signin__ID').show();
-                $('#signout__ID').hide();
+                $('#vm_username').text('');
+                $('#vm_signin').removeClass('vm_hide');
+                $('#vm_signout').addClass('vm_hide');
             }
             else{
-                $('#username__ID').text('Signed in as '+ $vm.user+third);
-                $('#signin__ID').hide();
-                $('#signout__ID').show();
+                $('#vm_username').text('Signed in as '+ $vm.user+third);
+                $('#vm_signin').addClass('vm_hide');
+                $('#vm_signout').removeClass('vm_hide');
             }
         }
         show_user();
         //---------------------------------------------
-        //if(window.location.hostname!='127.0.0.1'){
-        //    $vm.google_signin_setup('175539446682-tvqlkse9j0mt79fk70uetoq30bpnrboa.apps.googleusercontent.com','google__ID',show_user);
-        //    $vm.facebook_signin_setup('360182794393427','facebook__ID',show_user);
-        //}
+        if(window.location.hostname!='127.0.0.1'){
+            //$vm.google_signin_setup('175539446682-tvqlkse9j0mt79fk70uetoq30bpnrboa.apps.googleusercontent.com','google_0',show_user);
+            //$vm.facebook_signin_setup('360182794393427','facebook_0',show_user);
+        }
         //---------------------------------------------
     }
 </script>
@@ -141,12 +122,14 @@
 	}
     body{
         background-color: #004955 !important;
-        background-image: url(layout.jpg);
+        background-image: url(sys/layout.jpg);
         background-size: cover;
         background-repeat: repeat-x;
         background-position: center top;
         background-attachment: fixed;
     }
+    /*----------------------*/
+    /*nodule*/
     .vm_module{
         width:100%;
         height:100%;
@@ -156,12 +139,24 @@
     #vm_framework{
         height:100%;
     }
-    #layout__ID {
+    #layout_0 {
         display: grid;
-        grid-template-rows: auto 1fr;
+        grid-template-rows: 1fr;
     }
-    #content__ID {
+    /*----------------------*/
+    /*header*/
+    #header_0{
+        /*height:100px;*/
+        /*background: rgba(0,0,0,0.5);*/
+        position: fixed;
+        top: 0;
+        left:0;
+        right:0;
+        z-index:1030;
+    }
+    #content_0{
         overflow:auto;
+        margin-top:80px;
     }
     /*----------------------*/
     @media screen and (max-width: 1280px) {
@@ -172,7 +167,7 @@
     }
     /*----------------------*/
     /*content*/
-    #content_container__ID{
+    #content_container_0{
         width:100%;
         /*overflow:hidden;*/
     }
@@ -180,14 +175,14 @@
         display:none;
         position:absolute;
     }
-    .loader__ID {
+    .loader_0 {
       height: 4px;
       width: 100%;
       position: relative;
       overflow: hidden;
       background-color: #ddd;
     }
-    .loader__ID:before{
+    .loader_0:before{
       display: block;
       position: absolute;
       content: "";
@@ -206,10 +201,10 @@
         to {left: 100%;}
     }
     /*----------------------*/
-    #database_d__ID{
+    #database_d_0{
         display:none;
     }
-    #database_p__ID{
+    #database_p_0{
         display:none;
     }
     /*----------------------*/
