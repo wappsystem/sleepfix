@@ -5,8 +5,8 @@
         "pis-form":                         {                       "url":"tasks/mirror/pis-form.html"},
         "consent-form":                     {"table_id":"20011504", "url":"tasks/mirror/consent-form.html"},
         "registration-form":                {"table_id":"20011505", "url":"tasks/mirror/registration-form.html"},
-
-        "screen-failure-thank-you-page":    {                       "url":"tasks/screen-failure-thank-you-page.html"},
-        "sleepfix-study-page":      {                       "url":"tasks/sleepfix-study-page.html"}
+        "screen-failure-phq-9":             {"url":"tasks/screen-failure-phq-9.html"},
+        "screen-failure-thank-you-page":    {"url":"tasks/screen-failure-thank-you-page.html"},
+        "sleepfix-study-page":              {"url":"tasks/sleepfix-study-page.html"}
 	}
 }
