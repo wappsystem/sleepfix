@@ -112,8 +112,13 @@
                 $('html,body').animate({scrollTop: $("#pdfs__ID").offset().top},'slow');
             })
             //-------------------------------------
-            //We should send email here
-            //--------------------------------------------------------
+            $vm.vm["__ID"].show=function(){
+    			document.title="Sleep App - Sleep Fix Study";
+                $("meta[name='description']").attr("content","SleepFix");
+                $("body").removeClass();
+                $("body").addClass('body_background_study__ID');
+    		}
+            //-------------------------------------
         }
     </script>
     <style>
@@ -122,6 +127,9 @@
             overflow:auto;
             animation: vm_module_fadein 1.0s;
             /*background-color: #fff;*/
+        }
+        .body_background_study__ID{
+            background-image: url(images/data-bg.jpg);
         }
     </style>
     <style third-party>
