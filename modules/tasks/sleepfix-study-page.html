@@ -5,10 +5,12 @@
             <div class="row">
               <div class="col-lg-9 col-sm-12 order-lg-2">
                 <h1>SleepFix Study Page</h1>
+<!--
                 <div class="d-md-none">
                     <button type="button" id=btn7__ID class="btn btn-outline-light">Videos</button>
                     <button type="button" id=btn8__ID class="btn btn-outline-light">PDFs</button>
                 </div>
+-->
                 <p>Aliquam non vestibulum mi, sed volutpat ipsum. Nunc ultricies quam id mi semper, vitae mattis mi iaculis. Nullam tincidunt vehicula turpis at porttitor. Sed bibendum odio non maximus suscipit. Pellentesque consectetur orci id rutrum lacinia. Lumino theme is a Bootstrap 4.0 mobile compatible layout for your website. Cras dolor neque, mollis et tortor eget, ornare hendrerit lectus. </p>
                 <p>Aliquam non vestibulum mi, sed volutpat ipsum. Nunc ultricies quam id mi semper, vitae mattis mi iaculis. Nullam tincidunt vehicula turpis at porttitor. Sed bibendum odio non maximus suscipit. Pellentesque consectetur orci id rutrum lacinia. Lumino theme is a Bootstrap 4.0 mobile compatible layout for your website. Cras dolor neque, mollis et tortor eget, ornare hendrerit lectus. </p>
                 <!--                <button type="button" id="btn1__ID" class="btn btn-primary btn-lg">TAKE PART IN STUDY</button> -->
@@ -103,7 +105,7 @@
             $('#btn6__ID').on('click',function(){
                 alert("Where to go?");
             })
-            //-------------------------------------
+/*            //-------------------------------------
             $('#btn7__ID').on('click',function(){
                 $('html,body').animate({scrollTop: $("#videos__ID").offset().top},'slow');
             })
@@ -111,7 +113,7 @@
             $('#btn8__ID').on('click',function(){
                 $('html,body').animate({scrollTop: $("#pdfs__ID").offset().top},'slow');
             })
-            //-------------------------------------
+*/            //-------------------------------------
             $vm.vm["__ID"].show=function(){
     			document.title="Sleep App - Sleep Fix Study";
                 $("meta[name='description']").attr("content","SleepFix");
@@ -130,6 +132,7 @@
         }
         .body_background_study__ID{
             background-image: url(images/data-bg.jpg);
+            background-position: left top;
         }
     </style>
     <style third-party>
