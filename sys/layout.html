@@ -11,7 +11,7 @@
         	<div id=vm_loader class="loader_0"></div>
         </div>
         <footer id=footer_0>
-            <div class="container mt-0">
+            <div class="container mt-0" id=appstore style="display:none">
               <div class="row justify-content-end px-0">
                 <div class="col"><a id=btn2_0><img src="images/AppStore.png" alt="Download from the App Store"/></a><a id=btn3_0><img src="images/GooglePlay.png" alt="Download from Google Play"/></a> </div>
               </div>
@@ -46,6 +46,7 @@
     //-------------------------------------
     $('#btn1_0').on('click',function(){
         $vm.load_module_v2('sleepfix-study-page');
+        $('#appstore').show();
 
     })
     //-------------------------------------
@@ -86,8 +87,8 @@
             var module=$(this).attr('module');
             if(module!=undefined) $vm.load_module_v2(module);
         })
-        $('#m_title').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module);    })
-        $('#vm_logo').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module);    })
+        $('#m_title').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module); $('#appstore').hide();   })
+        $('#vm_logo').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module); $('#appstore').hide();   })
         //---------------------------------------------
         var show_user=function(){
             var third=""
