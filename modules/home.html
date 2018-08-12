@@ -4,7 +4,7 @@
        <div class="row">
          <div class="col-lg-6 col-md-12 col-sm-12 order-lg-2">
            <h1>SleepFix Study</h1>
-           <p>Aliquam non vestibulum mi, sed volutpat ipsum. Nunc ultricies quam id mi semper, vitae mattis mi iaculis. Nullam tincidunt vehicula turpis at porttitor. Sed bibendum odio non maximus suscipit. Pellentesque consectetur orci id rutrum lacinia. Lumino theme is a Bootstrap 4.0 mobile compatible layout for your website. Cras dolor neque, mollis et tortor eget, ornare hendrerit lectus. </p>
+           <p>Aliquam non vestibulum mi, sed volutpat ipsum. <a id=test__ID>Nunc</a> ultricies quam id mi semper, vitae mattis mi iaculis. Nullam tincidunt vehicula turpis at porttitor. Sed bibendum odio non maximus suscipit. Pellentesque consectetur orci id rutrum lacinia. Lumino theme is a Bootstrap 4.0 mobile compatible layout for your website. Cras dolor neque, mollis et tortor eget, ornare hendrerit lectus. </p>
            <button type="button" id="btn1__ID" class="btn btn-primary btn-lg greenbutton">NO THANKS</button>
            <button type="button" id="btn2__ID" class="btn btn-primary btn-lg">TAKE PART IN STUDY</button>
          </div>
@@ -19,10 +19,15 @@
          var prefix=this_module.prefix; if(prefix==undefined) prefix="";
          //-------------------------------------
          $('#btn1__ID').on('click',function(){
-            alert("Where to go?");
+            alert("Page information missing.");
          })
          //-------------------------------------
          $('#btn2__ID').on('click',function(){
+             alert("Not ready yet.");
+            //$vm.load_module_v2(prefix+'screening-form','',{});
+         })
+         //-------------------------------------
+         $('#test__ID').on('click',function(){
             $vm.load_module_v2(prefix+'screening-form','',{});
          })
          //-------------------------------------
