@@ -16,6 +16,19 @@
                 <div class="col"><a id=btn2_0><img src="images/AppStore.png" alt="Download from the App Store"/></a><a id=btn3_0><img src="images/GooglePlay.png" alt="Download from Google Play"/></a> </div>
               </div>
             </div>
+            <div class="container mt-0" id=logos__ID style="">
+              <div class="row justify-content-left px-0">
+                <div class="col-4 ">
+                    <a><img src="images/crc-logo.png" style="width:250px" alt="CRC Alertness,Productivity and Safety"/></a>
+                </div>
+                <div class="col-4 ">
+                    <a ><img src="images/usyd.png" style="width:250px" alt="USYD"/></a>
+                </div>
+                <div class="col-4 ">
+                    <a ><img src="images/woolcock.gif" style="width:300px" alt="Woolcock"/></a>
+                </div>
+              </div>
+            </div>
         </footer>
     </div>
 </div>
@@ -47,6 +60,7 @@
     $('#btn1_0').on('click',function(){
         $vm.load_module_v2('sleepfix-study-page');
         $('#appstore').show();
+        $('#logos__ID').hide();
 
     })
     //-------------------------------------
@@ -87,8 +101,8 @@
             var module=$(this).attr('module');
             if(module!=undefined) $vm.load_module_v2(module);
         })
-        $('#m_title').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module); $('#appstore').hide();   })
-        $('#vm_logo').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module); $('#appstore').hide();   })
+        $('#m_title').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module); $('#appstore').hide();$('#logos__ID').show();   })
+        $('#vm_logo').on('click',function(){   var module=$(this).attr('module');   $vm.load_module_v2(module); $('#appstore').hide();$('#logos__ID').show();  })
         //---------------------------------------------
         var show_user=function(){
             var third=""
@@ -297,5 +311,11 @@
     	margin-left:5px;
     	margin-right:5px;
     }
+    .logos {
+    	width: 250px;
+    	height: auto;
+    	float: right;
+    	margin-left:5px;
+    	margin-right:5px;
     /*------------------------*/
 </style>
