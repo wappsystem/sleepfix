@@ -60,6 +60,13 @@
             $vm.vm_router=undefined;
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
             //------------------------------------
+            $vm.module_links=[
+                "https://www.sfix.com.au/modules.json",
+            ];
+            $vm.module_list={
+                "home": {"url":"https://www.sfix.com.au/modules/home.html"},
+            }
+            //------------------------------------
             $vm.local_url=function(url){
                 var urlR=url;
                 if($vm.localhost==true){
@@ -70,21 +77,7 @@
                 return urlR;
             }
             //------------------------------------
-            $vm.remote_url=function(url){
-                var urlR=url;
-                urlR=urlR.replace('http://127.0.0.1:8000/vmiis/your-company-business-portal/','https://www.vmiis.com/');
-                urlR=urlR.replace('http://127.0.0.1:8000/wappsystem/sleepfix-management/','https://management.sfix.com.au/');
-                urlR=urlR.replace('http://127.0.0.1:8000/wappsystem/sleepfix/','https://www.sfix.com.au/');
-                return urlR;
-            }
-            //------------------------------------
-            $vm.module_links=[
-                "https://www.sfix.com.au/modules.json",
-            ];
-            $vm.module_list={
-                "home": {"url":"https://www.sfix.com.au/modules/home.html"},
-            }
-            //------------------------------------
+            for(p in $vm.module_links) $vm.module_links[p]=$vm.local_url($vm.module_links[p]);
             for(p in $vm.module_list) $vm.module_list[p].url=$vm.local_url($vm.module_list[p].url);
             //------------------------------------
             $vm.start=function(){
