@@ -7,6 +7,7 @@
         "registration-form":                {"table_id":"20011505", "url":"https://management.sfix.com.au/modules/tasks/registration-form.html"},
         "screen-failure-phq-9":             {"url":"https://management.sfix.com.au/modules/tasks/screen-failure-phq-9.html"},
         "screen-failure-thank-you-page":    {"url":"https://management.sfix.com.au/modules/tasks/screen-failure-thank-you-page.html"},
+        "sleepfix-study-page-tmp":          {"url":"https://management.sfix.com.au/modules/tasks/sleepfix-study-page-tmp.html"},
         "sleepfix-study-page":              {"url":"https://management.sfix.com.au/modules/tasks/sleepfix-study-page.html"}
 	}
 }
