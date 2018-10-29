@@ -44,7 +44,7 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
     <script main>
         //------------------------------------
-        $vm={};$VmAPI={};$vm.ver=[241,241];
+        $vm={};$VmAPI={};$vm.ver=[242,242];
         $vm.start_time=new Date().getTime();
         $vm.api_path_development="https://cbs.wappsystem.com/dev/";
         $vm.api_path_production="https://cbs.wappsystem.com/pro/";
@@ -128,7 +128,7 @@
     <script unknow>
         //-------------------------------------
         $('#btn1_0').on('click',function(){
-            $vm.load_module_v2('sleepfix-study-page-tmp','',{});
+            $vm.load_module_v2('sleepfix-study-page','',{});
             $('#appstore').show();
             $('#logos__ID').hide();
         })
